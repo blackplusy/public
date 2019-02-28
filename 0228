@@ -53,7 +53,106 @@ b.后端
 			desktop
 				win7  win10  winxp  
 	web服务器
+		apache   不支持java
+		nginx    轻量级web服务器(反向代理、负载均衡)
+		tomcat   java
+		iis		 微软
 	数据库服务器
+		关系型数据库
+			informix	IBM+HP  军、政、运、银
+			db2			IBM     军、政、运、银
+			oracle      oracle  中大型
+			mysql       oracle  互联网
+			sqlserver   微软    
+		非关系型数据库
+			mongodb		大数据、爬虫
+			redis		缓存、验证   新浪微博
+			cassandra   facebook   
+3.访问网站的过程
+	http://sports.sina.com.cn:80/slamdunk/live.shtml?id=2019022817
+	a.URL
+	统一资源定位器
+		协议 		http://
+		域名		sports.sina.com.cn
+		端口        80
+		虚拟目录    ...
+		访问文件    ...
+		访问参数    ...
+	b.协议
+		协议：一组规则规范
+		http协议：超文本传输协议
+		规定了网络中数据传输先传什么后传什么，怎么传
+		超文本(富文本):声音、图像、视频
+		普通文本
+		http协议特点：无状态(彼此不记录过去的行为)
+		http协议请求：
+			get   请求的信息显示在URL上，主要用于查看，相对不安全
+			https://s.taobao.com/search?q=lv&imgfile=&commend=all&ssid=s5-e&search_type=item&sourceId=tb.index&spm=a21bo.2017.201856-taobao-item.1&ie=utf8&initiative_id=tbindexz_20170306
+			https://s.taobao.com/search?q=zara&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20190228&ie=utf8
+			post	请求的信息显示在请求体中，主要用于提交，相对安全
+		cookie&session
+			cookie   验证方式，访问记录，定投广告
+			session	 验证方式，30分钟超时
+		状态码
+			200     	2开头的请求成功
+			302         3开头的移动或者缓存
+			404 		4开头的客户端请求有问题
+			500			5开头的服务端有问题
+	c.端口
+		作用：区分应用层进程
+		默认端口
+		apache/nginx/iis	80
+		tomcat				8080
+		mysql   			3306
+		oracle 				1521
+	d.域名
+		FQDN(完全合格域名)
+		DNS(域名解析服务器)
+		正向解析
+			域名--IP
+			win+r--cmd--nslookup 域名
+			ping 域名
+		反向解析
+			Ip--域名
+4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
