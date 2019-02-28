@@ -1,0 +1,59 @@
+黑哥
+QQ、wechat：914338492
+tel：18028768679
+
+1.常用的软件架构
+	qq           c/s   b/s
+	wechat		c/s   b/s
+	淘宝		c/s   b/s
+	支付宝		c/s   b/s
+	B612		c/s
+	斗鱼	    c/s   b/s
+	微博		c/s   b/s
+	b站			c/s   b/s
+	快播		c/s   b/s
+a.单机软件
+	不需要网络就可以执行的应用程序
+
+b.b/s架构软件
+	b:浏览器
+		ie          edge QQ baidu uc 搜狗 
+		chrome      
+		firefox		
+		safari
+	s:服务器
+		非常牛逼的电脑
+
+c.c/s架构软件
+	c:客户端
+		pc端		
+		移动端	ipad 手机...
+	s:服务器
+2.b/s架构的后端
+a.前端
+	html	标记性语言  静态页面
+	js		javascript   动态页面(动画、交互)
+			java         后端语言
+			jsp（java server page）
+	css		样式表      结构美化
+	ui		美工  		
+b.后端
+	操作系统
+		unix	mac  ios   
+		linux
+				安卓
+				redhat    centos
+				suse	  opensuse
+				ubuntu 	  kali       
+				红旗      redstar
+				COS
+		windows
+			server
+				server 03 08 12 16
+			desktop
+				win7  win10  winxp  
+	web服务器
+	数据库服务器
+
+
+
