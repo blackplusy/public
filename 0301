@@ -93,6 +93,64 @@ DDL	数据库定义语言   create alter drop truncate
 DML	数据库操作语言   insert update delete
 DCL 数据库控制语言   grant revoke
 DQL 数据库查询语言   select
+c.表结构的修改
+补充：desc 表名；  查看表结构
+添加列
+alter table goods add ddate date;
+修改列
+alter table goods modify price char(20);
+删除列
+alter table goods drop column ddate;
+d.表结构的删除
+语法：drop table 表;
+
+5.数据的新增
+注意：
+字符类型数据需要加单引号
+数字类型数据直接使用
+日期类型数据需要加单引号
+向表中指定列新增数据
+语法：insert into 表(列1，列2...) values(值1，值2.....);
+例子：向goods表中新增数据，商品名称是football
+insert into goods(goods_name) values('football');
+例子：向goods表中新增数据，商品名称baseball，价格500
+insert into goods(goods_name,price) values('baseball',500);
+
+向表中所有列新增数据
+语法：insert into 表 values(值1，值2....);
+例子：向goods表中新增数据，商品名称baseball，价格500
+insert into goods values('baseball',500);
+
+
+6.数据的删除
+delete	  	可以删除指定数据，DML，删除数据可以找回
+truncate	只能删除所有数据，DDL，删除数据无法找回
+
+delete 语法：
+delete from 表 where 条件;
+例子：删除goods表中商品名称是football的所有数据
+delete from goods where goods_name='football';
+例子：删除goods表中所有数据
+delete from goods;
+
+truncate语法：
+truncate table 表;
+例子：删除goods表中所有数据
+truncate table goods;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
