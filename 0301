@@ -138,6 +138,48 @@ truncate table 表;
 例子：删除goods表中所有数据
 truncate table goods;
 
+创建一张员工表(emp)
+员工名称 ename 字符类型 20个字符
+员工工号 empno 数字类型
+员工薪资 sal   数字类型
+员工奖金 comm  数字类型
+部门编号 deptno 数字类型
+
+create table emp(
+	ename char(20),
+	empno int,
+	sal   int,
+	comm  int,
+	deptno int
+);
+
+新增数据
+scott,100,1000,0,3
+king,101,300,500,4
+tom,102,1000,0,4
+james,103,100,500,5
+owen,103,1000,0,3
+
+create table emp(
+	ename char(20),
+	empno int,
+	sal   int,
+	comm  int,
+	deptno int
+);
+
+insert into emp 
+values('scott',100,1000,0,3),('king',101,300,500,4);
+
+
+
+
+
+
+
+
+
+
 
 
 
