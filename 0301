@@ -72,6 +72,37 @@ c.mysql数据库
 		查看当前数据库有哪些表
 	select * from ecs_category\G;
 		查看ecs_category表中所有数据
+4.表
+a.数据类型
+	字符类型 'abc' '123'  char  varchar
+	数字类型  123         int
+	日期类型  2019-03-01  date
+b.表结构的创建
+	语法：create table 表(
+				列  数据类型，
+				列  数据类型
+			);
+	创建表商品(goods),商品名称(goods_name) 字符类型，商品价格(price) 数字类型。
+	create table goods(
+		goods_name   char(20),
+		price        int
+	);
+补充：
+SQL(结构化查询语句)
+DDL	数据库定义语言   create alter drop truncate
+DML	数据库操作语言   insert update delete
+DCL 数据库控制语言   grant revoke
+DQL 数据库查询语言   select
+
+
+
+
+
+
+
+
+
+
 
 
 
