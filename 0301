@@ -1,0 +1,40 @@
+
+1.网站搭建
+b/s架构后端：
+	web服务器
+	数据库服务器
+
+集成软件
+	xampp
+		x:任意操作系统
+		a:apache
+		m:mysql
+		p:php
+		p:perl
+	wamp
+		w:windows
+	phpstudy
+2.phpstudy
+a.文件夹简介
+apache   web服务器软件所在位置
+	bin		存放命令位置
+	conf	存放配置文件位置
+	logs	存放日志的位置
+mysql    数据库软件所在位置
+	bin		存放命令位置
+	data    存放数据库数据
+	my.ini  mysql的配置文件
+www      网站的根目录(网站代码所在位置)
+b.ecshop网站搭建
+开发语言：     php
+web服务器：   apache
+数据库服务器：mysql
+1.解压ecshop文件
+2.复制解压后的文件夹到phpstudy的安装文件夹下的WWW文件夹中
+3.浏览器中输入127.0.0.1/ecshop按照提示进行安装
+补充：127.0.0.1==localhost==电脑本机
+注意：mysql数据库的管理员是root，默认密码是root
+
+
+
+
