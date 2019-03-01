@@ -171,7 +171,36 @@ create table emp(
 insert into emp 
 values('scott',100,1000,0,3),('king',101,300,500,4);
 
+数据的修改
+语法：update 表 set 列=值 where 条件;
+注意：
+如果不加where条件，默认修改的是整个列的数据
+例子：更新emp表中所有的sal为0
+update emp set sal=0;
 
+如果增加where条件，修改指定行的列的数据
+例子：修改emp表中名字为scott的sal为1000
+update emp set sal=1000 where ename='scott';
+
+update 更新
+set    设置
+where  在哪里
+
+======================================================
+ecshop表结构：
+http://book.ecmoban.com/images/db.htm
+数据的查询
+查询可以查询指定的行，指定的列，指定行的列
+语法：select  列  from  表  where 条件;
+*是代表表中所有的列名
+查询ecs_goods表中所有数据
+select * from ecs_goods;
+查询ecs_goods表中商品名称为KD876的所有数据
+select * from ecs_goods where goods_name='KD876';
+查询ecs_goods表中所有的商品名称
+select goods_name from ecs_goods;
+查询ecs_goods表中商品名称P806的商品名称和本店售价
+select goods_name,shop_price from ecs_goods where goods_name='P806';
 
 
 
