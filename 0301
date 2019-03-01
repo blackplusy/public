@@ -35,6 +35,50 @@ web服务器：   apache
 补充：127.0.0.1==localhost==电脑本机
 注意：mysql数据库的管理员是root，默认密码是root
 
+c.mysql数据库
+1.mysql的服务和端口
+	mysqld	mysql的主服务
+	win+r--cmd--tasklist | find "mysqld"
+	tasklist    查看系统中的进程
+	|			管道，前面的输出作为后面的输入
+	find		搜索
+	mysql   mysql的客户端服务
+	mysql的端口  3306
+	win+r--cmd--netstat -an | find "3306"
+2.mysql的登录
+	a.登录方式
+		a1.进入到命令所在文件夹
+		a2.设置环境变量
+			计算机--属性--高级--系统变量--Path中添加
+			;D:\phpStudy\MySQL\bin
+			确定...
+	b.登录命令
+		win+r--cmd
+		mysql -u root -p
+			管理员登录本地数据库
+		mysql -u root -h 127.0.0.1 -p
+			管理员登录IP为127.0.0.1的数据库
+3.mysql的基础命令
+	mysql数据库是由表组成
+	mysql的表是由数据组成
+	数据库分为2部分：数据库软件、数据库数据
+	show databases;
+		查看当前有哪些数据库
+	select database();
+		查看当前数据库的名字
+	use test
+		数据库切换为test数据库
+	show tables;
+		查看当前数据库有哪些表
+	select * from ecs_category\G;
+		查看ecs_category表中所有数据
+
+
+
+
+
+
+
 
 
 
