@@ -200,6 +200,21 @@ select s# from sc where c#='C2' or c#='C4';
 
 
 
+1.jpg
+a.select * from test1 where department='计算机系'
+  and place='北京';
+b.update test1 set department='信息学院' 
+  where department='计算机系';
+c.select t1.no,t1.name,t2.grade,t2.courses   from test1 t1,test2 t2
+  where t1.no=t2.no
+  and t2.grade>=75;
+
+5.bmp
+a.select avg(english) from mark;
+b.
+select  m.math,c.name,c.address,c.telno  from cust c,mark m
+where c.studentno=m.studentno
+and c.studentno in (11,22,33,44,55);
 
 
 
