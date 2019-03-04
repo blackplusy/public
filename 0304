@@ -176,6 +176,28 @@ select distinct(c.cat_name) from ecs_goods g,ecs_category c
 where g.cat_id=c.cat_id
 and g.goods_name like '诺基亚%';
 
+2.jpg
+a.select s.name from student s,achievement a
+  where s.id=a.id and a.mark>85;
+b.select count(id) from achievement
+  where mark>=90;
+c.insert into achievement values(7,80);
+d.update achievement set mark=87
+  where id=3;
+e.delete from achievement where id=6;
+  delete from student where name='Betty';
+
+4.jpg
+a.select s#,grade from sc where c#='C2';
+b.select sname from s where sname like 'D%';
+c.
+select s.s#,s.sname from s,sc,c
+where s.s#=sc.s#
+and sc.c#=c.c#
+and c.cname='Maths';
+d.
+select s# from sc where c#='C2' or c#='C4';
+
 
 
 
