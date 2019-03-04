@@ -172,7 +172,9 @@ and c.cat_name='3G手机';
 
 
 查询商品名称以诺基亚开头的商品所属的分类名称
-
+select distinct(c.cat_name) from ecs_goods g,ecs_category c
+where g.cat_id=c.cat_id
+and g.goods_name like '诺基亚%';
 
 
 
