@@ -1,0 +1,152 @@
+1.常见数据库软件
+	oracle
+	mysql
+	sqlserver
+	mongodb
+	redis
+
+2.mysql基础
+	mysql端口：  3306
+	tasklist | find "mysqld"
+	netstat -an |find "3306"
+3.mysql登录
+	mysql -u root -p
+	注意：环境变量的设置
+4.mysql的基础命令
+	show databases;
+	select database();
+	use test;
+	show tables;
+	select * from goods;
+5.表结构创建
+	数据类型：
+	数字   int
+	字符   char  varchar
+	日期   date
+	表结构创建语法：
+	create table 表(
+		列  数据类型,
+		列  数据类型
+	);
+
+6.表结构的删除
+	语法：drop table 表;
+
+7.数据的新增
+	语法：insert into 表 values 值;
+	语法：insert into 表(列1，列2...) values(值1，值2...);
+
+8.数据的修改
+	语法：update 表 set 列=值 where 条件;
+
+9.数据的删除
+	语法:delete from 表 where 条件；
+	语法:truncate table 表;
+
+10.数据的查询
+	语法:select 列 from 表 where 条件;
+cshop表结构：
+http://book.ecmoban.com/images/db.htm
+数据的查询
+查询可以查询指定的行，指定的列，指定行的列
+语法：select  列  from  表  where 条件;
+*是代表表中所有的列名
+查询ecs_goods表中所有数据
+select * from ecs_goods;
+查询ecs_goods表中商品名称为KD876的所有数据
+select * from ecs_goods where goods_name='KD876';
+查询ecs_goods表中所有的商品名称
+select goods_name from ecs_goods;
+查询ecs_goods表中商品名称P806的商品名称和本店售价
+select goods_name,shop_price from ecs_goods where goods_name='P806'
+
+================================================
+where条件
+筛选数据时候所用到的
+1.比较运算
+	>	大于
+	<	小于
+	=	等于
+	>=	大于等于
+	<=	小于等于
+	!=	不等于
+	<>	不等于
+	例子：查询ecs_goods表中本店售价高于2000的所有商品信息
+	select * from ecs_goods where shop_price>2000;
+	例子：查询ecs_goods表中商品名称不是KD876的所有商品信息
+	select * from ecs_goods where goods_name<>'KD876';
+2.关系运算
+	and    同时满足条件
+	or     满足一个条件即可
+	not	   不满足条件
+	例子：查询ecs_goods表中本店售价范围2000和3000之间的所有商品名称
+	select goods_name from ecs_goods
+	where shop_price>=2000
+	and  shop_price<=3000;
+	例子：查询商品名称是KD876或者诺基亚的所有信息
+	select * from ecs_goods 
+	where goods_name='KD876'
+	or    goods_name='诺基亚';
+3.区间
+	between ...and ...
+	注意：小在前，大在后，包括两个端点
+例子：查询ecs_goods表中本店售价范围2000和3000之间的所有商品名称
+	select * from ecs_goods where shop_price between 2000 and 3000;
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
