@@ -214,6 +214,48 @@ c.
 select sn,sd from s where s# in (select s# from sc where c#!='C5');
 
 
+分组查询
+分组函数
+max		最大
+min     最小
+avg     平均
+sum     求和
+count   计数
+分组函数通常和分组一起使用，但是也可以单独使用
+查询city表中最大city_id，最小city_id
+select max(city_id),min(city_id) from city;
+分组查询
+按照某种属性进行分类
+语法：select 列 from 表 
+		where 条件
+			group by 分组条件
+				having 分组后过滤条件;
+
+select city_id from city group by city_id;   yes
+select city_id ,country_id from city group by country_id; no
+select * from city group by city_id; no
+例子：
+查询city表中每个country_id对应多少个城市
+select count(city) from city group by country_id;
+查询每个国家有多少个城市，要求显示国家名称，城市数量
+select  co.country,count(c.city)  from city c,country co
+where c.country_id=co.country_id
+group by co.country;
+
+having	分组后过滤，后面可以直接跟分组函数
+where   分组前过滤，后面不能直接跟分组函数
+
+例子：查询城市数量超过30的国家名称
+select  co.country,count(c.city)  from city c,country co
+where c.country_id=co.country_id
+group by co.country
+having count(c.city)>20;
+
+注意：分组分为单分组，双分组，多分组
+group by 列1，列2
+先按照列1进行分组，再按照列2进行分组
+
+
 
 
 
