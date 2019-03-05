@@ -189,7 +189,29 @@ select address_id from address where city_id in (select city_id from city where 
 select first_name from customer where address_id in (select address_id from address where city_id in (select city_id from city where country_id in (select country_id from country where country='China'))) and first_name like 'J%';
 
 
+--3.jpg
+a.  
+select * from dt_pay where salary>(select avg(salary) from dt_pay);
+b.
+select * from dt_pay;
+c.
+truncate table dt_pay;
 
+--7.jpg
+a.
+查询c表中满足条件的c#
+select c# from s where cn='税收基础';
+查询sc表中c#为上面查询出来结果的s#
+select s# from sc where c# in (select c# from s where cn='税收基础');
+查询s表中s#为上面查询结果的学号，姓名
+select s#,sn from s where s#　in (select s# from sc where c# in (select c# from s where cn='税收基础'));
+b.
+查询sc表中满足条件的s#
+select s# from sc where c#='C2';
+查询s表中满足s#为上面查询出来结果的姓名，单位
+select sn,sd from s where s# in (select s# from sc where c#='C2');
+c.
+select sn,sd from s where s# in (select s# from sc where c#!='C5');
 
 
 
