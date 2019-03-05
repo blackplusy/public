@@ -105,6 +105,30 @@ where c.country_id=co.country_id
 and c.city_id=a.city_id
 and co.country='China';
 
+3.查询国家名称是China的并且客户名字以J开头的客户名字
+1.分析列
+国家名称
+客户名字
+2.分析表
+country
+city
+address
+customer
+3.关联
+select * from country co,city c,address a,customer cu
+where c.country_id=co.country_id
+and   a.city_id=c.city_id
+and   a.address_id=cu.address_id;
+4.过滤
+select cu.first_name from country co,city c,address a,customer cu
+where c.country_id=co.country_id
+and   a.city_id=c.city_id
+and   a.address_id=cu.address_id
+and   co.country='China'
+and   cu.first_name like 'J%';
+
+
+
 
 
 
