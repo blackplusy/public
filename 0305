@@ -1,0 +1,109 @@
+1.简单查询
+比较
+	> < = >= <= !=
+关系
+	and or not
+区间
+	between and
+模糊
+	like
+	_
+	%
+空值
+	is null
+	is not null
+in
+2.多表查询
+语法：select 列 from 表1，表2 where 表1.列=表2.列;
+      select 列 from 表1 inner join 表2 on 表1.列=表2.列;
+      select  d.老师名字 from a,b,c,d
+      where a.b=b.b
+      and   b.c=c.c
+      and   c.d=d.d
+      and   a.学生名字='张三';
+      select  d.老师名字 from a inner join b on a.b=b.b
+      inner join c on b.c=c.c 
+      inner join d on c.d=d.d
+      where a.学生名字='张三';
+ ========================================
+左联查询、右联查询
+都是基于内联查询
+create table a(
+	a   int
+);
+
+create table b(
+	a   int,
+	b   char(10)
+);
+
+insert into a values(1),(2),(3);
+insert into b values(1,'a'),(2,'b'),(4,'d');
+左联查询 
+左表中所有数据都存在
+左联查询结果=内联查询结果+左表中有，右表中没有，对应右表中位置为空
+select 列 from 左表 left join 右表 on 左表.列=右表.列;
+select * from a,b where a.a=b.a;
+select * from a left join b on a.a=b.a;
+
+右联查询
+右表中所有数据都存在，可以和左联查询互换
+select 列 from 左表 right join 右表 on 左表.列=右表.列;
+select * from a right join b on a.a=b.a;
+
+====================================================
+https://dev.mysql.com/doc/index-other.html
+1.导入sakila数据库到mysql中
+a.解压sakila的压缩包
+b.进入到sakila解压所在文件夹
+c.打开命令提示符
+d.登录mysql数据库
+e.导入sakila-schema.sql
+	source sakila-schema.sql;
+f.导入sakila-data.sql
+	source sakila-data.sql;
+g.检查是否导入成功
+	show databases;
+	use sakila;
+	show tables;
+	select * from city;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
