@@ -200,7 +200,7 @@ truncate table dt_pay;
 --7.jpg
 a.
 查询c表中满足条件的c#
-select c# from s where cn='税收基础';
+select c# from c where cn='税收基础';
 查询sc表中c#为上面查询出来结果的s#
 select s# from sc where c# in (select c# from s where cn='税收基础');
 查询s表中s#为上面查询结果的学号，姓名
@@ -249,7 +249,7 @@ where   分组前过滤，后面不能直接跟分组函数
 select  co.country,count(c.city)  from city c,country co
 where c.country_id=co.country_id
 group by co.country
-having count(c.city)>20;
+having count(c.city)>30;
 
 注意：分组分为单分组，双分组，多分组
 group by 列1，列2
