@@ -72,6 +72,38 @@ g.检查是否导入成功
 --1.查询国家名称为China的城市名称有哪些？
 --2.查询国家名称是China的所属地区有哪些？
 --3.查询国家名称是China的并且客户名字以J开头的客户信息
+国家名称为china的城市名称有哪些？
+1.分析列
+国家名称
+城市名称
+2.分析表
+country   country
+city      city
+3.关联
+select * from country co,city c
+where co.country_id=c.country_id;
+4.过滤
+select c.city from country co,city c
+where co.country_id=c.country_id
+and co.country='China';
+
+--2.查询国家名称是China的所属地区有哪些？
+1.分析列
+国家名称
+所属地区
+2.分析表
+conutry
+address
+city
+3.关联
+select * from country co,city c,address a
+where c.country_id=co.country_id
+and c.city_id=a.city_id;
+4.过滤
+select a.district from country co,city c,address a
+where c.country_id=co.country_id
+and c.city_id=a.city_id
+and co.country='China';
 
 
 
