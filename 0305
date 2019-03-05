@@ -69,9 +69,7 @@ g.检查是否导入成功
 	select * from city;
 
 
---1.查询国家名称为China的城市名称有哪些？
---2.查询国家名称是China的所属地区有哪些？
---3.查询国家名称是China的并且客户名字以J开头的客户信息
+
 国家名称为china的城市名称有哪些？
 1.分析列
 国家名称
@@ -129,8 +127,41 @@ and   cu.first_name like 'J%';
 
 
 
+子查询
+一条SQL语句的执行依赖于另外一条SQL语句的执行结果
+子查询可以应用在新增修改删除中
+查询国家名称是China的城市名称有哪些？
 
+查询国家表中满足条件的country_id
+select country_id from country where country='China';
 
+查询城市表中country_id为上面查询出来结果的城市名称
+select city from city where country_id=(select country_id from country where country='China');
+
+--2.jpg
+3.
+insert into achievement values((select id from student where name='Robert'),80);
+4.
+update achievement set mark=87 where id=(select id from student where name='Rose');
+5.
+delete from achievement where id=(select id from student where name='Betty');
+delete from student where name='Betty';
+
+子查询通过子句查询出来结果分为单行子查询，多行子查询
+单行子查询，查询出来结果是1个，可以用in，也可以用=
+多行子查询，查询出来结果是多个，只能用in
+查询城市名称以S开头的国家有哪些？
+
+查询城市表中满足条件的country_id
+select country_id from city where city like 'S%';
+
+查询国家表中country_id为上面查询出来结果的国家名称
+select country from country where country_id in (select country_id from city where city like 'S%');
+
+通过子查询解决以下问题
+--1.查询国家名称为China的城市名称有哪些？
+--2.查询国家名称是China的所属地区有哪些？
+--3.查询国家名称是China的并且客户名字以J开头的客户信息
 
 
 
