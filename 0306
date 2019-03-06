@@ -1,0 +1,40 @@
+多表查询
+select 列 from 表1，表2 where 表1.列=表2.列;
+select 列 from 表1 inner join 表2 on 表1.列=表2.列;
+
+子查询
+一条SQL语句执行依赖于另外一条SQL语句执行结果
+
+分组查询
+select 列 from 表 where 条件
+	group by 分组条件
+		having 分组后过滤条件
+
+排序查询
+顺序：从小到大
+	order by 列
+	order by 列 asc
+
+倒序：从大到小
+	order by 列 desc
+select 列 from 表 where 条件
+	group by 分组条件
+		having 分组后过滤条件
+			order by 排序条件;
+
+例子：查询city表中所有数据，按照country_id顺序排列
+select * from city order by country_id ;
+
+例子：查询city表中所有数据，按照city_id逆序排列
+select * from city order by city_id desc;
+
+分页查询
+limit 
+查询city表中前10条数据
+select * from city limit 10;
+查询city表中10-15条数据
+select * from city limit 10,5;
+
+
+
+
