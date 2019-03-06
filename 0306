@@ -129,6 +129,31 @@ os： 操作系统
 		查看当前数据库中有哪些集合
 	db.startup_log.find()
 		查看startup_log集合的所有文档
+6.CURD(增删改查)
+	文档的新增
+		db.xiyouji.insert({name:'8jie',age:200,jingli:'teamwork'})
+	文档的查询
+		db.xiyouji.find({age:18})
+	文档的修改
+		db.xiyouji.update({name:'5kong'},{$set:{age:1000}})
+	文档的删除
+		db.xiyouji.remove({name:'8jie'})
+7.文档的新增
+	新增普通文档
+		 db.xiyouji.insert({name:'tangsir'})
+	新增文档指定_id
+		db.xiyouji.insert({_id:0,name:'shasir'})
+	新增内嵌文档
+		db.xiyouji.insert({name:'5kong',jingli:{kill:100,hit:2}})
+	新增多个文档
+		db.xiyouji.insert([{name:'niumo'},{name:'tiantian'},{name:'redhair'}])
+8.文档的删除
+	删除所有文档
+		db.xiyouji.remove({})
+	删除指定文档
+		db.xiyouji.remove({age:1000})
+
+
 
 
 
