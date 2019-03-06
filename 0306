@@ -78,5 +78,61 @@ and s.年龄 between 20 and 35
 order by s.准考证号 desc;
 
 
+========================================================================================
+mongodb
+1.mongodb的安装
+os： 操作系统
+	  x64     		64位操作系统
+	  i386 i686 	32位操作系统
+安装：傻瓜安装
+	注意:compass工具不要安装
+2.mongodb的服务
+	mongod 	mongodb的主服务
+	mongo   mongodb的客户端服务
+	27017   mongodb的端口
+	检查系统进程
+		win+r---tasklist |  find "mongod"
+	检查mongodb端口
+		win+r---netstat -an | find "27017"
+3.mongodb的启动
+	mongod --dbpath d:\data
+	mongod --dbpath d:\data --logpath d:\data\mongo.log
+	--dbpath    数据文件存放的路径(文件夹)
+	--logpath   日志文件的存放位置(文件)
+	--fork      后台运行
+4.mongodb的登录
+	命令提示符:win+r--cmd
+	mongo
+		登录本地test数据库
+	mongo 127.0.0.1/admin
+		登录IP为127.0.0.1的admin数据库
+	mongo 127.0.0.1:27017/admin
+		登录IP为127.0.0.1端口为27017的admin数据库
+	补充：设置环境变量
+	计算机--属性--高级--环境变量--系统变量--Path中添加
+	;C:\Program Files\MongoDB\Server\4.0\bin
+	确定--确定--确定
+5.mongodb的基础命令
+	mysql      mongodb
+	数据库     数据库
+	表         集合
+	数据       文档
+	db
+		查看当前数据库的名字
+	show databases
+	show dbs
+		查看当前有哪些数据库的名字
+	use  local
+		设置当前数据库为local
+	show tables
+	show collections
+		查看当前数据库中有哪些集合
+	db.startup_log.find()
+		查看startup_log集合的所有文档
+
+
+
+
+
 
 
