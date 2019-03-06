@@ -18,7 +18,7 @@ db.emp.find({$or:[{name:'ALLEN'},{name:'KING'}]},{sal:1,name:1,deptno:1})
 
 4.查询emp集合中部门为20号部门或者工资大于1500并且小于2500的人的所有信息
 
-db.emp.find({$or:[{deptno:20},{$and:[{sal:{$gt:1500}},{$lt:2500}]}]})
+db.emp.find({$or:[{deptno:20},{$and:[{sal:{$gt:1500}},{sal:{$lt:2500}}]}]})
 
 
 5.查询emp集合中名字为KING或者部门号为30号部门的人的姓名，佣金，部门号
