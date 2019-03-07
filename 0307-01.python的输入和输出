@@ -1,0 +1,32 @@
+1.python的开发工具
+pycharm
+eclipse+pydev
+sublime text
+2.程序运行环境
+a.开发工具
+b.python的idle
+c.命令提示符--python
+d.命令提示符--python 文件名
+3.python的输入和输出
+注意：所有通过python开发出来的程序都要以.py结尾
+a.输入的应用场景
+	1>taobao中搜索内容
+	2>网站登录输入用户名和密码
+	3>直播中视频传输
+b.输出的应用场景
+	1>taobao中显示内容
+	2>网站页面找不到 404
+	3>调试程序
+	4>声音外放
+c.输出
+	注意：print是把括号中内容输出到控制端
+	1>直接输出
+	2>变量输出
+	3>函数输出
+	4>格式化输出
+d.输入
+	input       在python2中接受键盘输入数字类型数据，python3中接受键盘输入字符类型数据
+	raw_input   在python2中接受键盘输入字符类型数据，python3中已经废弃
+	
+
+
