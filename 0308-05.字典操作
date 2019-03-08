@@ -1,0 +1,76 @@
+字典操作
+1.字典的应用场景
+2.创建字典
+3.访问字典
+4.修改字典
+5.删除字典
+6.补充
+
+1.字典的应用场景
+	1.前后端数据传输
+	2.浏览器提交数据给服务器
+	3.接口开发
+
+2.创建字典
+	字典是python中的映射数据类型
+	由键值对组成  name:'gaga'
+	一般是数字或者字符串作为键
+	dic={'name':'gaga','QQ':110}
+	dic2={'age':19}
+
+3.访问字典
+dic={'name':'gaga','QQ':110}
+dic2={'age':19}
+
+print(dic)
+print(dic['name'])
+print(dic['QQ'])
+
+4.修改字典
+dic={'name':'gaga','QQ':110}
+print(dic)
+dic['name']='simida'
+print(dic)
+dic['QQ']=500
+print(dic)
+
+5.删除字典
+a.del()
+可以删除指定元素(键值对)
+可以删除整个字典(无法访问)
+dic={'name':'gaga','QQ':110}
+print(dic)
+del dic['name']
+print(dic)
+del dic
+#print(dic)
+b.clear()
+清空字典，清空后仍然可以访问
+dic={'name':'gaga','QQ':110}
+dic.clear()
+print(dic)
+
+6.补充
+1.键keys
+2.值values
+3.键值对items
+
+#keys
+dic={'name':'gaga','QQ':110}
+print(dic.keys())
+for i in dic.keys():
+    print(i)
+
+#values
+dic={'name':'gaga','QQ':110}
+print(dic.values())
+for i in dic.values():
+    print(i)
+
+
+#items
+dic={'name':'gaga','QQ':110}
+print(dic.items())
+for i,j in dic.items():
+    print(str(i)+':'+str(j))
+
