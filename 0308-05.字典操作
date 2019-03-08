@@ -80,7 +80,19 @@ for i,j in dic.items():
 2.首先输入用户名，如果用户名不存在或者为空，则一直提示输入正确的用户名
 3.当用户名正确的时候，提示去输入密码，如果密码跟用户名不对应，则提示密码错误请重新输入。
 
-
-
-｛username:'HEYGOR',passwd：'123'｝
-｛heygor:123｝
+#coding=utf-8
+dic={'heygor':'123','o8ma':'456'}
+while True:
+    name=input('请输入您的用户名')
+    if name in dic.keys():
+        print('用户名输入正确')
+        while True:
+            passwd=input('请输入您的密码:')
+            if passwd==dic[name]:
+                print('您已经登录')
+                break
+            else:
+                print('请重新输入密码')
+        break
+    else:
+        print('您的输入有误，请重新输入')
