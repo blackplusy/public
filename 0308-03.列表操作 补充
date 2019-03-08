@@ -1,0 +1,48 @@
+1.栈的方式访问列表
+2.获取列表的索引
+3.列表排序
+4.列表推导式
+
+
+1.栈的方式访问列表
+	队列：先进先出，后进后出
+	栈：  后进先出，先进后厨
+
+	l=[1,2,3,4]
+	print(l)
+	l.append(5)
+	print(l)
+	l.append(6)
+	l.append(7)
+	print(l)
+	l.pop()
+	print(l)
+	l.pop()
+	print(l)
+2.获取列表索引
+	列表.index()   搜索列表中元素第一次出现的位置
+	l=[1,2,3,4,5,3,4,5]
+	print(l)
+	print(l.index(5))
+
+	l=['kobe','james','rose']
+	print(l.index('rose'))
+	for index,value in enumerate(l):
+    	print('索引是: '+str(index)+'值是：'+value)
+    	#print(type(index))    
+#$tupe              判断数据类型
+#数据类型转换       int() 转换为数字类型   str() 转换为字符类型   list() 转换为列表类型
+3.列表的排序
+l=[1,3,5,2,4,6]
+print(l)
+l.reverse()   #列表中元素倒序排列
+print(l)
+l=[1,3,5,2,4,6]
+print(l)
+l.sort()      #列表中元素进行排序
+print(l)
+
+l=[1,3,5,2,4,6]
+print(l)
+l.sort(reverse=True)
+print(l)
